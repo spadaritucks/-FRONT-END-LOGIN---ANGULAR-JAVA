@@ -1,0 +1,21 @@
+<default-login-layout 
+title="Login into your Account" 
+primaryBtnText="Login now" 
+secondaryBtnText="Signup Now" 
+(submit)="submit()"
+(navigate)="navigate()"
+[disablePrimaryBtn]="!loginForm.valid">
+
+    <form [formGroup]="loginForm">
+        <primary-input formControlName="email" formName="email" type="email" label="email"
+            placeholder="johndoe@gmail.com">
+            <img src="email-icon.svg">
+        </primary-input>
+
+        <primary-input formControlName="password" formName="password" type="password" label="Your Password">
+            <img src="password-icon.svg">
+        </primary-input>
+        <span>Forgot Password?</span>
+    </form>
+
+</default-login-layout>
